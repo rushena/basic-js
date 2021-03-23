@@ -8,7 +8,6 @@ module.exports = function dateSample(num) {
         return false
     }
 
-    const year = Math.ceil(HALF_LIFE_PERIOD * Math.log2(MODERN_ACTIVITY / +num))
-    console.log(num, year);
-    return year;
+    const year = Math.ceil(HALF_LIFE_PERIOD * Math.log2(MODERN_ACTIVITY / +num));
+    return year < 0 ? false : year;
 };
